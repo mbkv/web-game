@@ -4,11 +4,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { GlobalStyles } from "twin.macro";
+import { GameContextProvider } from "./GameContext";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<GlobalStyles />
-		<App />
+		<GameContextProvider>
+			<GlobalStyles />
+			<App />
+		</GameContextProvider>
 	</React.StrictMode>,
 	document.getElementById("root")
 );
